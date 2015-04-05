@@ -31,3 +31,17 @@ Deploy via the bulid server, all tests should be green and code coverage should 
 
 Plan the stories with at least one of your colleagues.
 Don't work on this out of the office, you can work on other related projects but keep the `work` in the office.
+
+# Running the project
+
+- install npm
+- run `npm install`
+- run `npm start`
+- navigate to: ``http://localhost:8080``
+
+# Running the specs
+
+ - install npm
+ - run `npm install`
+ - navigate to the spec folder
+ - run ``karma start karma.conf.js``

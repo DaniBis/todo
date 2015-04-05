@@ -1,0 +1,31 @@
+{
+  "name": "ToDo",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "jquery": "latest",
+    "requirejs": "latest",
+    "requirejs-text": "latest",
+    "ejs": "latest",
+    "backbone": "latest",
+    "lodash": "latest",
+    "connect": "2.7.0"
+  },
+
+  "devDependencies": {
+    "jasmine-core": "latest",
+    "jasmine": "latest",
+    "grunt": "latest",
+    "karma": "latest",
+    "karma-jasmine": "latest",
+    "karma-phantomjs-launcher": "latest",
+    "karma-html-reporter": "latest",
+    "karma-coverage": "latest",
+    "karma-requirejs": "latest",
+    "grunt-exec": "latest"
+  },
+
+  "scripts": {
+    "grunt": "node_modules/.bin/grunt"
+  }
+}
