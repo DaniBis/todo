@@ -1,4 +1,7 @@
-define(['backbone'], function (Backbone) {
+define([
+  'backbone',
+  'views/index'
+], function (Backbone, IndexView) {
   return Backbone.Router.extend({
     routes: {
       "(?:params)": "index"
@@ -9,17 +12,8 @@ define(['backbone'], function (Backbone) {
     },
 
     index: function() {
-      this.renderView('index');
-    },
-
-    renderView: function(viewModuleName) {
-      var self = this;
-      require(['views/' + viewModuleName], function(View) {
-        var view = new View();
-        self.body.empty();
-        self.body.append(view.$el);
-        view.render();
-      });
+      var indexView = new IndexView();
+      indexView.render();
     }
   });
 });
