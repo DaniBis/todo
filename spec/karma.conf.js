@@ -13,12 +13,11 @@ module.exports = function(config) {
       'karma-html-reporter',
       'karma-teamcity-reporter',
       'karma-coverage',
-      'karma-requirejs',
-      'karma-sinon'
+      'karma-requirejs'
     ],
 
     // frameworks to use
-    frameworks: ['jasmine', 'requirejs', 'sinon'],
+    frameworks: ['jasmine', 'requirejs'],
 
     preprocessors: {
       'app/js/**/*.js': ['coverage']

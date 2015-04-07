@@ -1,34 +1,43 @@
 define([
-  '../../app/js/router',
-  'views/index'
-], function (Router, ListIndex) {
+  'router',
+  'views/app_view'
+], function (Router, AppView) {
   var instance, subject;
 
   beforeEach(function () {
-    instance = new Router();
+    instance = Router.initialize();
     subject = function () {
       return instance;
     };
   });
 
   describe('routes', function () {
+    beforeEach(function () {
+      subject = function () {
+        return instance.routes
+      }
+    });
+
     it('has a index route', function () {
-      expect(subject().routes['(?:params)']).toEqual('index');
+      expect(subject()['(?:params)']).toEqual('index');
     });
   });
 
-  describe('index', function () {
+  describe('navigate to empty route', function () {
     beforeEach(function () {
       Backbone.history.start({silent:true, pushState:true});
+
+      subject = function () {
+        instance.navigate('', true)
+      }
     });
 
     it('calls render on the index view', function () {
-      var mockListView = sinon.mock(ListIndex.prototype);
-      mockListView.expects("render").once();
-      subject().navigate('', true);
+      var renderSpy = spyOn(AppView.prototype, 'render').and.callThrough();
 
-      mockListView.verify();
-      mockListView.restore();
+      subject();
+
+      expect(renderSpy).toHaveBeenCalled();
     })
   })
 });

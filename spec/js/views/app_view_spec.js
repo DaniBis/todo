@@ -1,5 +1,5 @@
 define([
-  '../../../app/js/views/index',
+  'views/app_view',
   'ejs'
 ], function (Index) {
   var instance, subject;

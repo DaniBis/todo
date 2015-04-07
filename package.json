@@ -16,7 +16,6 @@
     "jasmine-core": "latest",
     "jasmine": "latest",
     "grunt": "latest",
-    "sinon": "latest",
     "karma": "latest",
     "karma-jasmine": "latest",
     "karma-phantomjs-launcher": "latest",

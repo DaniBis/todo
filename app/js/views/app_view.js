@@ -1,10 +1,10 @@
 define([
   'jquery',
   'backbone',
-  'text!templates/index.ejs'
+  'text!templates/app_view.ejs'
 ], function ($, Backbone, indexTemplate) {
   return Backbone.View.extend({
-    el: $('#index'),
+    el: $('#todo-app'),
 
     currentDate: function () {
       return new Date();
