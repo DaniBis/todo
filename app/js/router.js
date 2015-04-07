@@ -7,10 +7,6 @@ define([
       "(?:params)": "index"
     },
 
-    initialize: function() {
-      this.body = $('body');
-    },
-
     index: function() {
       var indexView = new IndexView();
       indexView.render();

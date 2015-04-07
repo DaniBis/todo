@@ -13,11 +13,12 @@ module.exports = function(config) {
       'karma-html-reporter',
       'karma-teamcity-reporter',
       'karma-coverage',
-      'karma-requirejs'
+      'karma-requirejs',
+      'karma-sinon'
     ],
 
     // frameworks to use
-    frameworks: ['jasmine', 'requirejs'],
+    frameworks: ['jasmine', 'requirejs', 'sinon'],
 
     preprocessors: {
       'app/js/**/*.js': ['coverage']
@@ -45,7 +46,7 @@ module.exports = function(config) {
 
     // test results reporter to use
     // possible values: 'dots', 'progress', 'junit', 'growl', 'coverage'
-    reporters: ['progress', 'html'], // to use coverage, replace `html` with `coverage`
+    reporters: ['dots', 'coverage'], // to use coverage, replace `html` with `coverage`
 
 
     // web server port

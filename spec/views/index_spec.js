@@ -1,4 +1,6 @@
-define(['views/index'], function (Index) {
+define([
+  'views/index'
+], function (Index) {
   var instance, subject;
 
   beforeEach(function () {
