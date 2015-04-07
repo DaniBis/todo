@@ -13,7 +13,8 @@ define([
     render: function () {
       var compiledTemplate = ejs.render(indexTemplate, {view: this, model: this.model}, {});
       this.$el.empty();
-      this.$el.append(compiledTemplate)
+      this.$el.append(compiledTemplate);
+      return this
     }
   });
 });

@@ -1,5 +1,5 @@
 define([
-  'router',
+  '../../app/js/router',
   'views/index'
 ], function (Router, ListIndex) {
   var instance, subject;
