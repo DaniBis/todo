@@ -1,13 +1,21 @@
 define([
-  'views/index'
+  'views/index',
+  'ejs'
 ], function (Index) {
   var instance, subject;
 
   beforeEach(function () {
-    instance = new Index();
+    instance = new Index({el: $('body')});
     subject = function () {
       return instance;
     }
+  });
+
+  describe('render', function () {
+    it ('will get rendered', function () {
+      subject().render();
+      expect(subject().$el.text()).toEqual(jasmine.stringMatching(/The current date is:/));
+    })
   });
 
   describe('currentDate', function () {
