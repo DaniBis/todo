@@ -19,7 +19,7 @@ require.config({
   // example of using shim, to load non AMD libraries (such as underscore and jquery)
   paths: {
     jquery: '../../node_modules/jquery/dist/jquery',
-    lodash: '../../node_modules/lodash/index',
+    lodash: '../../node_modules/lodash/lodash',
     backbone: '../../node_modules/backbone/backbone',
     ejs: '../../node_modules/ejs/ejs',
     text: '../../node_modules/requirejs-text/text'

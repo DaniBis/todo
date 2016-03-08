@@ -29,7 +29,7 @@ module.exports = function(config) {
       {pattern: 'app/js/**/*.ejs', included: false},
       {pattern: 'node_modules/backbone/backbone.js', included: false},
       {pattern: 'node_modules/requirejs-text/text.js', included: false},
-      {pattern: 'node_modules/lodash/index.js', included: false},
+      {pattern: 'node_modules/lodash/lodash.js', included: false},
       {pattern: 'node_modules/jquery/dist/jquery.js', included: false},
       {pattern: 'node_modules/ejs/ejs.js', included: false},
       {pattern: 'spec/**/*spec.js', included: false},
