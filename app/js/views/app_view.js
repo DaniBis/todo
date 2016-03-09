@@ -4,7 +4,7 @@ define([
   'text!templates/app_view.ejs'
 ], function ($, Backbone, indexTemplate) {
   return Backbone.View.extend({
-    el: $('#todo-app'),
+    el: this.$('#todo-app'),
 
     currentDate: function () {
       return new Date();
@@ -12,9 +12,10 @@ define([
 
     render: function () {
       var compiledTemplate = ejs.render(indexTemplate, {view: this, model: this.model}, {});
+
       this.$el.empty();
       this.$el.append(compiledTemplate);
-      return this
+      return this;
     }
   });
 });

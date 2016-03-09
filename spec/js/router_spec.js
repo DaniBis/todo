@@ -14,8 +14,8 @@ define([
   describe('routes', function () {
     beforeEach(function () {
       subject = function () {
-        return instance.routes
-      }
+        return instance.routes;
+      };
     });
 
     it('has a index route', function () {
@@ -25,11 +25,11 @@ define([
 
   describe('navigate to empty route', function () {
     beforeEach(function () {
-      Backbone.history.start({silent:true, pushState:true});
+      Backbone.history.start({silent: true, pushState: true});
 
       subject = function () {
-        instance.navigate('', true)
-      }
+        instance.navigate('', true);
+      };
     });
 
     it('calls render on the index view', function () {
@@ -38,6 +38,6 @@ define([
       subject();
 
       expect(renderSpy).toHaveBeenCalled();
-    })
-  })
+    });
+  });
 });
