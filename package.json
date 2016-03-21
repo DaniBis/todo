@@ -24,7 +24,9 @@
     "karma-html-reporter": "^0.2.7",
     "karma-jasmine": "^0.3.7",
     "karma-phantomjs-launcher": "^1.0.0",
+    "karma-requirejs": "^0.2.6",
     "karma-sinon": "^1.0.4",
+    "karma-teamcity-reporter": "^0.2.2",
     "phantomjs-prebuilt": "^2.1.5",
     "sinon": "^1.17.3"
   },
