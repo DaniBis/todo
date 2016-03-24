@@ -4,6 +4,9 @@ define([
   'text!templates/app_view.ejs',
   'model/model',
   'collection/collection'
+  //Include<Iisus>
+  //Include<Biblia>
+  //Include<Icoane>
 ], function ($, Backbone, indexTemplate, model, collection){
   return Backbone.View.extend({
     el: this.$('#todo-app'),
@@ -11,14 +14,14 @@ define([
     events:{
       "click #button" : "createOnClick",
     },
-    
+
     initialize:function(){
       this.collection= new collection();
     },
 
     createOnClick:function(){
       var value;
-      value=$('input').val;
+      value=$('input').val();
         if(value!=''){
            this.collection.add(new model());
         }

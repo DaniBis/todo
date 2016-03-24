@@ -30,27 +30,35 @@ define([
       beforeEach(function(){
          instance.render();
          subject=function(){
-           instance.$("#button").click();
+           instance.$('button').click();
          }
       });
 
-      it('add items on click', function(){        
+      describe('input has no value', function(){
+         beforeEach(function(){
+           instance.$('input').val('');
+          });
+   
+       it('will be empty', function(){
+        subject();
+         expect(instance.collection.length).toBe(0);
+        })
+      });
+
+      describe('input has value', function(){
+         beforeEach(function(){
+           instance.$('input').val('a');
+        });
+
+        it('add items on click', function(){        
          subject();
          expect(instance.collection.length).toBe(1);
-      })
+      });
+      });
     });
+
  
-
-  
-
 /*
- describe('check not to enter empty elements', function(){
-    it('will be empty', function(){
-        subject().render();
-        expect(subject().collection.length).toBe(0);
-    })
-  });
-
   describe('check if enter was pressed',function(){
     beforeEach(function(){
       subject().render();
