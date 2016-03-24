@@ -5,7 +5,8 @@ define([
 ], function (Index,collection) {
   var instance, subject;
 
-  beforeEach(function () {
+  describe('I have an instance', function(){
+beforeEach(function () {
     instance = new Index({collection: collection,el: $('body')});
   });
 
@@ -50,23 +51,12 @@ define([
            instance.$('input').val('a');
         });
 
-        it('add items on click', function(){        
+        it('add items on click', function(){            
          subject();
          expect(instance.collection.length).toBe(1);
       });
       });
     });
-
- 
-/*
-  describe('check if enter was pressed',function(){
-    beforeEach(function(){
-      subject().render();
-      }
-    });
-     it('add items on enter', function(){
-    expect(instance.$('input').length).toEqual(1);
   });
-  });
-*/
 });
+  
