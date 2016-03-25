@@ -1,9 +1,9 @@
 define([
-     'backbone',
-     'model/model'
-   ],
+  'backbone',
+  'model/model'
+],
    function (Backbone, model) {
-    return Backbone.Collection.extend({
-     	model: model
+     return Backbone.Collection.extend({
+       model: model
      });
    });
